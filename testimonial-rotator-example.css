@@ -1,0 +1,20 @@
+
+/* THEME: EXAMPLE */
+.testimonial_rotator.template-example .slide { width: 100%; height: auto; }
+
+.testimonial_rotator.template-example .has-image .img,
+.testimonial_rotator_single.has-image.template-example .img { width: 20%; margin-right: 5%; float: left; padding: 0; padding-top: .5em; }
+
+.testimonial_rotator.template-example .has-image .img img,
+.testimonial_rotator_single.has-image.template-example .img img { width: 100%; max-width: 150px; height: auto; }
+
+.testimonial_rotator.template-example .has-image .text,
+.testimonial_rotator_single.has-image.template-example .text { width: 75%; float: left; padding: 0; margin: 0; }
+
+.testimonial_rotator.template-example .testimonial_rotator_author_info { font-style: italic; line-height: 1.2em; padding: 10px 0 10px 15px; border-left: solid 3px #efefef; margin: 10px 0; }
+.testimonial_rotator.template-example .testimonial_rotator_author_info p { font-size: 1.1em; line-height: 1.2em; }
+
+
+/* WIDGET OVERRIDES (IF NECCESSARY) */
+
+.widget .testimonial_rotator.template-example .has-image .text { font-size: 0.9em; }
