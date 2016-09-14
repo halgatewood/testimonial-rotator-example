@@ -14,20 +14,19 @@ class TestimonialRotatorExample
 {
 	private $version = 1.0;
 	
-	// UPDATER
-    public function updater()
-    {
-       if( is_admin() AND class_exists('testimonial_rotator_theme_updater') )
-       {
-	       new testimonial_rotator_theme_updater( 'testimonial-rotator-example', $this->version, plugin_basename(__FILE__) );
-       }
-    }
+	// UPDATER\
+	public function updater()
+	{
+		if( is_admin() AND class_exists('testimonial_rotator_theme_updater') )
+		{
+			new testimonial_rotator_theme_updater( 'testimonial-rotator-example', $this->version, plugin_basename(__FILE__) );
+		}
+	}
 	
-	
-    public function __construct()
-    {
+	public function __construct()
+	{
 		// UPDATE FUNCTIONALITY
-	    // UNCOMMENT TO HOOK INTO THE AUTOMATIC UPDATER SYSTEM
+	    	// UNCOMMENT TO HOOK INTO THE AUTOMATIC UPDATER SYSTEM
 		//add_action( 'plugins_loaded', array($this, 'updater') );
        
 		// SCRIPTS & CSS
@@ -40,14 +39,12 @@ class TestimonialRotatorExample
 			return ($template_name == "example") ? ' example-wrap ' : $default;
 		}
 		add_filter('testimonial_rotator_extra_wrap_class', 'hg_testimonial_rotator_extra_wrap_class_example', 10, 3 );
-    }
-
+	}
 	
-	
-    function scripts()
-    {
+	function scripts()
+	{
 	    wp_enqueue_style( 'testimonial-rotator-example', plugins_url('/testimonial-rotator-example.css', __FILE__) );
-    }
+	}
 }
 
 
@@ -58,10 +55,10 @@ function testimonial_rotator_example( $themes )
 {
 		$themes = (array) $themes;
 		return array_merge( $themes, array( 
-										'example' => array(
-											'title' 	=> 'Example', 
-											'icon' 		=> plugins_url( '/example.png', __FILE__) )
-										));
+							'example' => array(
+									'title' 	=> 'Example', 
+									'icon' 		=> plugins_url( '/example.png', __FILE__) )
+							));
 }
 
 
